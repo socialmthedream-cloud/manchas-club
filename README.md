@@ -1,4 +1,4 @@
-# manchas.club · Manchas Stamp Passport
+# meetmanchas.com · Manchas Stamp Passport
 
 Static site, no build step, no server. Hosted on GitHub Pages with the custom domain in `CNAME`.
 

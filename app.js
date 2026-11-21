@@ -108,7 +108,7 @@ function drawCert(c, L, name){
   x.strokeStyle = "#4A2E22"; x.lineWidth = 2; x.beginPath(); x.moveTo(W / 2 - 360, 955); x.lineTo(W / 2 + 360, 955); x.stroke();
   x.font = "600 34px Nunito, sans-serif"; x.fillStyle = "#7A6A5E";
   x.fillText("collected every stamp in " + L.name + " with Manchas", W / 2, 1020);
-  x.font = "700 52px Caveat, cursive"; x.fillStyle = "#4A2E22"; x.fillText("Explain It Like I'm 6 · manchas.club", W / 2, H - 150);
+  x.font = "700 52px Caveat, cursive"; x.fillStyle = "#4A2E22"; x.fillText("Explain It Like I'm 6 · meetmanchas.com", W / 2, H - 150);
 }
 function drawWall(c, L){
   const x = c.getContext("2d"), W = c.width, H = c.height;
