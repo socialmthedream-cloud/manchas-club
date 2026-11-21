@@ -1,0 +1,73 @@
+:root{
+  --paper:#F7EEDD; --paper-2:#EFE3CC; --card:#FBF5EA; --ink:#4A2E22; --ink-soft:#7A6A5E; --red:#B8433A; --line:rgba(74,46,34,.2);
+  --hand:"Caveat","Comic Sans MS",cursive; --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45;-webkit-text-size-adjust:100%}
+.app{max-width:480px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(28px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:14px}
+.red{color:var(--red)}
+a{color:var(--ink)}
+.top{display:flex;gap:10px;align-items:center}
+.top img{width:64px;height:auto;flex:0 0 auto}
+.top h1{font-family:var(--hand);font-size:36px;line-height:.95;margin:0}
+.top .sub{font-size:12.5px;color:var(--ink-soft)}
+.prog{background:var(--card);border-radius:16px;padding:12px 14px;box-shadow:inset 0 0 0 1.5px var(--line);display:flex;flex-direction:column;gap:8px}
+.prog .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.prog b{font-family:var(--hand);font-size:24px}
+.prog .n{font-size:13px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.track{height:10px;border-radius:99px;background:var(--paper-2);overflow:hidden}
+.track i{display:block;height:100%;background:var(--red);border-radius:99px;transition:width .5s}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:none;background:var(--paper-2);color:var(--ink);font:700 13px var(--body);padding:8px 12px;border-radius:99px;display:flex;gap:6px;align-items:center;cursor:pointer}
+.tab svg{width:18px;height:18px}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.land{border-radius:20px;padding:14px;background:var(--card);border:4px solid var(--c);display:flex;flex-direction:column;gap:12px}
+.land h2{font-family:var(--hand);font-size:30px;margin:0;line-height:1;display:flex;align-items:center;gap:8px}
+.land h2 svg{width:28px;height:28px}
+.land p{margin:0;font-size:13px;color:var(--ink-soft)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.slot{aspect-ratio:1/1;border-radius:50%;border:2.5px dashed var(--ink-soft);background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--hand);font-weight:700;color:var(--ink-soft);cursor:pointer;position:relative;padding:0}
+.slot .e{font-size:20px;line-height:1}
+.slot .t{font:700 8.5px var(--body);letter-spacing:.04em;text-transform:uppercase;line-height:1.1;max-width:85%;text-align:center}
+.slot.out{border-color:var(--ink);color:var(--ink)}
+.slot.soon{opacity:.45;cursor:default}
+.slot.special{border-color:var(--red);color:var(--red)}
+.slot.done{border:2.5px solid var(--ink);background:var(--f);color:var(--ink);transform:rotate(-8deg)}
+.slot.done::after{content:"";position:absolute;inset:4px;border-radius:50%;border:1.5px solid rgba(74,46,34,.35)}
+.slot.pop{animation:pop .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop{0%{transform:scale(1.6) rotate(-20deg);opacity:0}100%{transform:scale(1) rotate(-8deg);opacity:1}}
+.reward{border-radius:16px;padding:12px 14px;display:flex;gap:12px;align-items:center;background:var(--paper-2);border:none;width:100%;text-align:left;font:inherit;color:inherit}
+.reward .gift{width:44px;height:44px;border-radius:12px;background:var(--paper);display:grid;place-items:center;font-size:22px;flex:0 0 auto}
+.reward b{display:block;font-size:14px}
+.reward span{font-size:12.5px;color:var(--ink-soft)}
+button.reward{cursor:pointer;background:var(--red);color:var(--paper)}
+button.reward span{color:var(--paper)}
+.btn{border:none;border-radius:14px;padding:12px 16px;font:800 15px var(--body);cursor:pointer;background:var(--ink);color:var(--paper)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.red{background:var(--red)}
+.how{font-size:13.5px;background:var(--card);border-radius:14px;padding:12px 14px;box-shadow:inset 0 0 0 1.5px var(--line)}
+.how b{font-family:var(--hand);font-size:22px;display:block;line-height:1}
+.how ol{margin:6px 0 0;padding-left:20px;color:var(--ink-soft)}
+.grown{font-size:12.5px;color:var(--ink-soft);background:var(--paper-2);border-radius:14px;padding:10px 12px}
+.grown b{color:var(--ink)}
+.foot{font-size:12px;color:var(--ink-soft);text-align:center}
+.preview{font-size:12px;font-weight:800;color:var(--paper);background:var(--red);border-radius:10px;padding:6px 10px;text-align:center}
+.veil{position:fixed;inset:0;background:rgba(40,20,10,.35);display:flex;align-items:flex-end;justify-content:center;z-index:5}
+.sheet{background:var(--paper);width:100%;max-width:480px;border-radius:26px 26px 0 0;padding:18px max(18px,env(safe-area-inset-right,0px)) calc(26px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:12px;animation:up .25s ease-out;max-height:92vh;overflow-y:auto}
+@keyframes up{from{transform:translateY(40px);opacity:.4}}
+.sheet .k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--ink-soft)}
+.sheet h3{font-family:var(--hand);font-size:32px;line-height:1;margin:0}
+.sheet p{margin:0;color:var(--ink-soft);font-size:14px}
+.sheet label{font-weight:800;font-size:13px}
+.sheet input{font:700 22px var(--hand);letter-spacing:.06em;text-transform:uppercase;padding:10px 14px;border-radius:12px;border:2px solid var(--ink);background:var(--card);color:var(--ink);width:100%}
+.sheet .err{color:var(--red);font-size:13px;font-weight:700;min-height:1.2em}
+.sheet .rowb{display:flex;gap:8px}
+.sheet .rowb .btn{flex:1}
+.sheet canvas{width:100%;height:auto;border-radius:12px;box-shadow:0 6px 16px -10px rgba(74,46,34,.6)}
+.sheet .nm{font:700 22px var(--hand);padding:8px 12px;border-radius:12px;border:2px solid var(--ink);background:var(--card);color:var(--ink);width:100%;text-transform:none;letter-spacing:0}
+.dl{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (prefers-reduced-motion:reduce){.slot.pop,.sheet{animation:none}.track i{transition:none}}
